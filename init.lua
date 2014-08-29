@@ -6,7 +6,6 @@ local mashshift = {"cmd", "alt", "shift"}
 -- requires: grid, core.fnutils, core.alert
 
 local function opendictionary()
-  -- hydra.alert("Lexicon, at your service.", 0.75)
   core.application.launchorfocus("Dictionary")
 end
 
@@ -23,7 +22,8 @@ core.hotkey.bind(mashshift, 'L', function() core.window.focusedwindow():focuswin
 core.hotkey.bind(mashshift, 'K', function() core.window.focusedwindow():focuswindow_north() end)
 core.hotkey.bind(mashshift, 'J', function() core.window.focusedwindow():focuswindow_south() end)
 
-core.hotkey.bind(mash, 'M', grid.maximize_window)
+core.hotkey.bind(mash, 'M', function() core.window.focusedwindow():maximize() end)
+
 
 core.hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)
 core.hotkey.bind(mash, 'P', grid.pushwindow_prevscreen)

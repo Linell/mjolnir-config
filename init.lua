@@ -23,6 +23,7 @@ core.hotkey.bind(mashshift, 'K', function() core.window.focusedwindow():focuswin
 core.hotkey.bind(mashshift, 'J', function() core.window.focusedwindow():focuswindow_south() end)
 
 core.hotkey.bind(mash, 'M', function() core.window.focusedwindow():maximize() end)
+core.hotkey.bind(mashshift, 'M', function() core.window.focusedwindow():minimize() end)
 
 
 core.hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)

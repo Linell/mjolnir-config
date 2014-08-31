@@ -4,7 +4,7 @@ local grid = {}
 
 grid.MARGINX = 5
 grid.MARGINY = 5
-grid.GRIDWIDTH = 3
+grid.GRIDWIDTH = 4
 
 local function round(num, idp)
   local mult = 10^(idp or 0)

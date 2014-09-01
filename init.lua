@@ -3,37 +3,37 @@ local grid = require "grid"
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
 
--- requires: grid, core.fnutils, core.alert
+-- requires: grid, mj.fnutils, mj.alert
 
 local function opendictionary()
-  core.application.launchorfocus("Dictionary")
+  mj.application.launchorfocus("Dictionary")
 end
 
-core.hotkey.bind(mash, 'D', opendictionary)
+mj.hotkey.bind(mash, 'D', opendictionary)
 
-core.hotkey.bind(mash, ';', function() grid.snap(core.window.focusedwindow()) end)
-core.hotkey.bind(mash, "'", function() core.fnutils.map(core.window.visiblewindows(), grid.snap) end)
+mj.hotkey.bind(mash, ';', function() grid.snap(mj.window.focusedwindow()) end)
+mj.hotkey.bind(mash, "'", function() mj.fnutils.map(mj.window.visiblewindows(), grid.snap) end)
 
-core.hotkey.bind(mash, '=', function() grid.adjustwidth( 1) end)
-core.hotkey.bind(mash, '-', function() grid.adjustwidth(-1) end)
+mj.hotkey.bind(mash, '=', function() grid.adjustwidth( 1) end)
+mj.hotkey.bind(mash, '-', function() grid.adjustwidth(-1) end)
 
-core.hotkey.bind(mashshift, 'H', function() core.window.focusedwindow():focuswindow_west() end)
-core.hotkey.bind(mashshift, 'L', function() core.window.focusedwindow():focuswindow_east() end)
-core.hotkey.bind(mashshift, 'K', function() core.window.focusedwindow():focuswindow_north() end)
-core.hotkey.bind(mashshift, 'J', function() core.window.focusedwindow():focuswindow_south() end)
+mj.hotkey.bind(mashshift, 'H', function() mj.window.focusedwindow():focuswindow_west() end)
+mj.hotkey.bind(mashshift, 'L', function() mj.window.focusedwindow():focuswindow_east() end)
+mj.hotkey.bind(mashshift, 'K', function() mj.window.focusedwindow():focuswindow_north() end)
+mj.hotkey.bind(mashshift, 'J', function() mj.window.focusedwindow():focuswindow_south() end)
 
-core.hotkey.bind(mash, 'M', function() core.window.focusedwindow():maximize() end)
-core.hotkey.bind(mashshift, 'M', function() core.window.focusedwindow():minimize() end)
+mj.hotkey.bind(mash, 'M', function() mj.window.focusedwindow():maximize() end)
+mj.hotkey.bind(mashshift, 'M', function() mj.window.focusedwindow():minimize() end)
 
 
-core.hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)
-core.hotkey.bind(mash, 'P', grid.pushwindow_prevscreen)
+mj.hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)
+mj.hotkey.bind(mash, 'P', grid.pushwindow_prevscreen)
 
-core.hotkey.bind(mash, 'J', grid.pushwindow_down)
-core.hotkey.bind(mash, 'K', grid.pushwindow_up)
-core.hotkey.bind(mash, 'H', grid.pushwindow_left)
-core.hotkey.bind(mash, 'L', grid.pushwindow_right)
+mj.hotkey.bind(mash, 'J', grid.pushwindow_down)
+mj.hotkey.bind(mash, 'K', grid.pushwindow_up)
+mj.hotkey.bind(mash, 'H', grid.pushwindow_left)
+mj.hotkey.bind(mash, 'L', grid.pushwindow_right)
 
-core.hotkey.bind(mash, 'U', grid.resizewindow_taller)
-core.hotkey.bind(mash, 'O', grid.resizewindow_wider)
-core.hotkey.bind(mash, 'I', grid.resizewindow_thinner)
+mj.hotkey.bind(mash, 'U', grid.resizewindow_taller)
+mj.hotkey.bind(mash, 'O', grid.resizewindow_wider)
+mj.hotkey.bind(mash, 'I', grid.resizewindow_thinner)

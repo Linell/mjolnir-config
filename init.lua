@@ -1,9 +1,13 @@
-local grid = require "grid"
+mjolnir.application = require "mjolnir.application"
+mjolnir.window      = require "mjolnir.window"
+mjolnir.hotkey      = require "mjolnir.hotkey"
+mjolnir.fnutils     = require "mjolnir.fnutils"
+grid          = require "grid"
+
+
 
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
-
--- requires: grid, mj.fnutils, mj.alert
 
 local function opendictionary()
   mjolnir.application.launchorfocus("Dictionary")
@@ -22,9 +26,7 @@ mjolnir.hotkey.bind(mashshift, 'L', function() mjolnir.window.focusedwindow():fo
 mjolnir.hotkey.bind(mashshift, 'K', function() mjolnir.window.focusedwindow():focuswindow_north() end)
 mjolnir.hotkey.bind(mashshift, 'J', function() mjolnir.window.focusedwindow():focuswindow_south() end)
 
-mjolnir.hotkey.bind(mash, 'M', function() mjolnir.window.focusedwindow():maximize() end)
-mjolnir.hotkey.bind(mashshift, 'M', function() mjolnir.window.focusedwindow():minimize() end)
-
+mjolnir.hotkey.bind(mash, 'M', grid.maximize_window)
 
 mjolnir.hotkey.bind(mash, 'N', grid.pushwindow_nextscreen)
 mjolnir.hotkey.bind(mash, 'P', grid.pushwindow_prevscreen)

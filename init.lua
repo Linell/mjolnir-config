@@ -5,6 +5,8 @@ local fnutils = require "mjolnir.fnutils"
 local alert = require "mjolnir.alert"
 local grid = require "mjolnir.sd.grid"
 
+local spotify = require "mjolnir.lb.spotify"
+
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
 
@@ -39,5 +41,7 @@ hotkey.bind(mash, 'L', grid.pushwindow_right)
 hotkey.bind(mash, 'U', grid.resizewindow_taller)
 hotkey.bind(mash, 'O', grid.resizewindow_wider)
 hotkey.bind(mash, 'I', grid.resizewindow_thinner)
+
+hotkey.bind(mashshift, 'm', spotify.displayCurrentTrack())
 
 alert.show("Mjolnir, at your service.")

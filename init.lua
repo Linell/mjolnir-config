@@ -46,6 +46,6 @@ hotkey.bind(mash, 'U', grid.resizewindow_taller)
 hotkey.bind(mash, 'O', grid.resizewindow_wider)
 hotkey.bind(mash, 'I', grid.resizewindow_thinner)
 
-hotkey.bind(mashshift, 'm', spotify.displayCurrentTrack())
+hotkey.bind(mashshift, 'm', spotify.displayCurrentTrack)
 
 alert.show("Mjolnir, at your service.")

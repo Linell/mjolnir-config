@@ -1,14 +1,18 @@
+-- Load Extensions
 local application = require "mjolnir.application"
 local window = require "mjolnir.window"
 local hotkey = require "mjolnir.hotkey"
 local fnutils = require "mjolnir.fnutils"
 local alert = require "mjolnir.alert"
 local grid = require "mjolnir.sd.grid"
-
+-- Music controls
 local spotify = require "mjolnir.lb.spotify"
 
+-- Set up hotkey combinations
 local mash = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
+-- Set grid size.
+grid.GRIDWIDTH = 4
 
 local function opendictionary()
   alert.show("Lexicon, at your service.", 0.75)

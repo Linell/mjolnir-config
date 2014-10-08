@@ -14,6 +14,8 @@ local mashshift = {"cmd", "alt", "shift"}
 -- Set grid size.
 grid.GRIDWIDTH  = 6
 grid.GRIDHEIGHT = 4
+grid.MARGINX = 1
+grid.MARGINY = 1
 
 local function opendictionary()
   alert.show("Lexicon, at your service.", 0.75)

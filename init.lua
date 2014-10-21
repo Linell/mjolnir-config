@@ -14,8 +14,8 @@ local mashshift = {"cmd", "alt", "shift"}
 -- Set grid size.
 grid.GRIDWIDTH  = 6
 grid.GRIDHEIGHT = 4
-grid.MARGINX = 1
-grid.MARGINY = 1
+grid.MARGINX = 0
+grid.MARGINY = 0
 
 local function opendictionary()
   alert.show("Lexicon, at your service.", 0.75)
@@ -29,6 +29,8 @@ hotkey.bind(mash, "'", function() fnutils.map(window.visiblewindows(), grid.snap
 
 hotkey.bind(mash, '=', function() grid.adjustwidth( 1) end)
 hotkey.bind(mash, '-', function() grid.adjustwidth(-1) end)
+hotkey.bind(mashshift, '=', function() grid.adjustheight(1) end)
+hotkey.bind(mashshift, '-', function() grid.adjustheight(-1) end)
 
 hotkey.bind(mashshift, 'left', function() window.focusedwindow():focuswindow_west() end)
 hotkey.bind(mashshift, 'right', function() window.focusedwindow():focuswindow_east() end)

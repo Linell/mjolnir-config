@@ -68,4 +68,4 @@ hotkey.bind(mashshift, 'N',     spotify.next)
 hotkey.bind(mashshift, 'I',     spotify.previous)
 
 alert_sound:play()
-alert.show("Welcome back, Linell.", 3)
+alert.show("Mjolnir, at your service.", 3)

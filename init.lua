@@ -7,13 +7,18 @@ local alert       = require "mjolnir.alert"
 local grid        = require "mjolnir.bg.grid"
 -- Music controls
 local spotify     = require "mjolnir.lb.spotify"
+-- Sound and Notifications
+local sound = require "mjolnir._asm.ui.sound"
+local alert_sound = sound.get_byfile("alert.wav")
+local tink_sound  = sound.get_byname("Tink") -- Not actually used, just as a nice example.
+                                             -- More sounds in /System/Library/Sounds
 
 -- Set up hotkey combinations
 local mash      = {"cmd", "alt", "ctrl"}
 local mashshift = {"cmd", "alt", "shift"}
 -- Set grid size.
-grid.GRIDWIDTH  = 6
-grid.GRIDHEIGHT = 4
+grid.GRIDWIDTH  = 12
+grid.GRIDHEIGHT = 12
 grid.MARGINX    = 0
 grid.MARGINY    = 0
 
@@ -37,7 +42,7 @@ hotkey.bind(mashshift, 'right', function() window.focusedwindow():focuswindow_ea
 hotkey.bind(mashshift, 'up',    function() window.focusedwindow():focuswindow_north() end)
 hotkey.bind(mashshift, 'down',  function() window.focusedwindow():focuswindow_south() end)
 
-hotkey.bind(mash, 'M', grid.maximize_window)
+hotkey.bind(mash,      'M', grid.maximize_window)
 hotkey.bind(mashshift, 'M', function() window.focusedwindow():minimize() end)
 
 hotkey.bind(mash,      'F', function() window.focusedwindow():setfullscreen(true) end)
@@ -62,4 +67,5 @@ hotkey.bind(mashshift, 'O',     spotify.pause)
 hotkey.bind(mashshift, 'N',     spotify.next)
 hotkey.bind(mashshift, 'I',     spotify.previous)
 
-alert.show("Welcome back, Linell.")
+alert_sound:play()
+alert.show("Welcome back, Linell.", 3)

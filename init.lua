@@ -7,6 +7,7 @@ local alert       = require "mjolnir.alert"
 local grid        = require "mjolnir.bg.grid"
 -- Music controls
 local spotify     = require "mjolnir.lb.spotify"
+local audiodevice = require "mjolnir._asm.sys.audiodevice"
 -- Sound and Notifications
 local sound = require "mjolnir._asm.ui.sound"
 local alert_sound = sound.get_byfile("alert.wav")
@@ -66,6 +67,9 @@ hotkey.bind(mashshift, 'P',     spotify.play)
 hotkey.bind(mashshift, 'O',     spotify.pause)
 hotkey.bind(mashshift, 'N',     spotify.next)
 hotkey.bind(mashshift, 'I',     spotify.previous)
+
+hotkey.bind(mashshift, ']', function() audiodevice.defaultoutputdevice():setvolume(audiodevice.current().volume + 5) end)
+hotkey.bind(mashshift, '[', function() audiodevice.defaultoutputdevice():setvolume(audiodevice.current().volume - 5) end)
 
 alert_sound:play()
 alert.show("Mjolnir, at your service.", 3)

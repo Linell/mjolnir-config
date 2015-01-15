@@ -21,6 +21,7 @@ luarocks install mjolnir.fnutils
 luarocks install mjolnir.alert
 luarocks install mjolnir.bg.grid
 luarocks install mjolnir.lb.spotify
+luarocks install mjolnir._asm.sys.audiodevice
 luarocks install mjolnir._asm.ui.sound
 ```
 
@@ -65,6 +66,8 @@ all of the usage is defined, after all. For a brief breakdown though, here's wha
 | mashshift + O               | Pause Spotify.                                                                                         |
 | mashshift + N               | Skip to next song on Spotify.                                                                          |
 | mashshift + I               | Skip to previous song on Spotify.                                                                      |
+| mashshift + [               | Increase volume by increment of 5                                                                      |
+| mashshift + ]               | Decrease volume by increment of 5                                                                      |
 
 Hopefully that'll help you get a jump start on what everything does!
 

@@ -68,6 +68,8 @@ hotkey.bind(mashshift, 'O',     spotify.pause)
 hotkey.bind(mashshift, 'N',     spotify.next)
 hotkey.bind(mashshift, 'I',     spotify.previous)
 
+hotkey.bind(mashshift, 'T', function() alert.show(os.date("%A %b %d, %Y - %I:%M%p"), 4) end)
+
 hotkey.bind(mashshift, ']', function() audiodevice.defaultoutputdevice():setvolume(audiodevice.current().volume + 5) end)
 hotkey.bind(mashshift, '[', function() audiodevice.defaultoutputdevice():setvolume(audiodevice.current().volume - 5) end)
 

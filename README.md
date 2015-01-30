@@ -66,8 +66,9 @@ all of the usage is defined, after all. For a brief breakdown though, here's wha
 | mashshift + O               | Pause Spotify.                                                                                         |
 | mashshift + N               | Skip to next song on Spotify.                                                                          |
 | mashshift + I               | Skip to previous song on Spotify.                                                                      |
-| mashshift + [               | Increase volume by increment of 5                                                                      |
-| mashshift + ]               | Decrease volume by increment of 5                                                                      |
+| mashshift + ]               | Increase volume by increment of 5                                                                      |
+| mashshift + [               | Decrease volume by increment of 5                                                                      |
+| mashshift + T               | Shows the current date and time.                                                                       |
 
 Hopefully that'll help you get a jump start on what everything does!
 
